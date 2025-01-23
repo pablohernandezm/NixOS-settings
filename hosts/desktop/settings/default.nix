@@ -1,7 +1,8 @@
 {pkgs, ...}:{
   imports = [
-    ./hyprland
+    ./hypr
     ./waybar
     ./git
+    ./clipboard
   ];
 }

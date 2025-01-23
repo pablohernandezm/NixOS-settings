@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{...}: {
+  imports = [
+    ./hyprpolkitagent
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -11,6 +15,7 @@
       "$browser" = "uwsm app -- brave";
 
       exec-once = [
+        "systemctl --user enable --now hyprpolkitagent.service"
         "uwsm app -- waybar &"
         "uwsm app -- dunst &"
       ];
