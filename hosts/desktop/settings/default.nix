@@ -4,5 +4,6 @@
     ./waybar
     ./git
     ./clipboard
+    ./gaming
   ];
 }
