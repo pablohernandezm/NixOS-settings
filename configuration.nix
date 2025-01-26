@@ -1,5 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
+# Edit this configuration file to define what should be installed on your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { pkgs, ... }:
@@ -92,6 +91,15 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  # Install steam.
+  programs.steam.enable = true;
+
+  # Install java.
+  programs.java = {
+    enable = true;
+    package = pkgs.zulu;
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
