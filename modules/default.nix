@@ -1,4 +1,4 @@
-{ pkgs, ...}: {
+{ ... }: {
   imports = [
     ./ssh
     ./hypr
@@ -7,5 +7,7 @@
     ./rofi-wayland
     ./fonts
     ./pavucontrol
+    ./pulseaudio
+    ./sddm
   ];
 }
