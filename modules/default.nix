@@ -9,5 +9,6 @@
     ./pavucontrol
     ./pulseaudio
     ./sddm
+    ./gaming
   ];
 }
