@@ -11,6 +11,7 @@
       go
       bun
       nodejs
+      rustc
       cargo
       brave
       eza
