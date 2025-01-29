@@ -12,6 +12,7 @@
       bun
       nodejs
       rustc
+      rustfmt
       cargo
       brave
       eza
