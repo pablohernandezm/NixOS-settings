@@ -7,5 +7,6 @@
     ./gaming
     ./themes
     ./dunst
+    ./neovim
   ];
 }

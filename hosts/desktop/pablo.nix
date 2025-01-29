@@ -17,6 +17,7 @@
       font-manager
       isoimagewriter
       nemo
+      whatsapp-for-linux
       (writeShellScriptBin "chknixpath" (builtins.readFile ../../scripts/chknixpath.sh))
     ];
 

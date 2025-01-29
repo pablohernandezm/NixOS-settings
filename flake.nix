@@ -13,14 +13,19 @@
       modules = [
         ./configuration.nix
         ./modules
+
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.pablo = import ./hosts/desktop/pablo.nix;
-          home-manager.backupFileExtension = "backup1";
+          home-manager.backupFileExtension = "backup";
+
+          home-manager.extraSpecialArgs = { inherit inputs; };
         }
       ];
+
+      specialArgs = { inherit inputs; };
     };
   };
 }
