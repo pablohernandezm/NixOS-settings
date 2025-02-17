@@ -9,7 +9,7 @@
 
   xdg.desktopEntries.steam-run = {
     name = "Steam Run";
-    exec = "steam-run %f";
+    exec = ''sh -c "steam-run %f &"'';
     icon = "steam";
     type = "Application";
     mimeType = [ "application/x-shellscript" ];
