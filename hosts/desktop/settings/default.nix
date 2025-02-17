@@ -8,5 +8,6 @@
     ./themes
     ./dunst
     ./neovim
+    ./nemo
   ];
 }

@@ -19,6 +19,16 @@
   services.gvfs.enable = true;
   services.udisks2.enable = true;
 
+  # Printer
+  services.printing.enable = true;
+  services.printing.drivers = with pkgs; [ epson_201207w ];
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -53,11 +63,19 @@
     variant = "altgr-intl";
   };
 
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.pablo = {
     isNormalUser = true;
     description = "Pablo Hernandez";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker"];
     packages = with pkgs; [
       git
       neovim
