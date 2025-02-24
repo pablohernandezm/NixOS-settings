@@ -9,5 +9,6 @@
     ./dunst
     ./neovim
     ./nemo
+    ./flatpak
   ];
 }

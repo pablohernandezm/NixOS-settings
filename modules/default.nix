@@ -10,5 +10,6 @@
     ./pulseaudio
     ./sddm
     ./gaming
+    ./flatpak
   ];
 }

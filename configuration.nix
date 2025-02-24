@@ -21,7 +21,9 @@
 
   # Printer
   services.printing.enable = true;
-  services.printing.drivers = with pkgs; [ epson_201207w ];
+  services.printing.drivers = with pkgs; [ 
+    epson_201207w 
+  ];
   services.avahi = {
     enable = true;
     nssmdns4 = true;

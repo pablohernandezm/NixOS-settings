@@ -21,7 +21,6 @@
       nemo-with-extensions
       nemo-fileroller
       unzip
-      whatsapp-for-linux
       supabase-cli
       (writeShellScriptBin "chknixpath" (builtins.readFile ../../scripts/chknixpath.sh))
     ];
