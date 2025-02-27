@@ -1,7 +1,8 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = [
-    pkgs.steam-run-free
+  environment.systemPackages = with pkgs; [
+    steam-run-free
+    wine-wayland
   ];
 
   programs.steam = {

@@ -18,6 +18,7 @@
       eza
       font-manager
       isoimagewriter
+      ventoy-full
       nemo-with-extensions
       nemo-fileroller
       unzip
