@@ -11,5 +11,6 @@
     ./sddm
     ./gaming
     ./flatpak
+    ./lactd
   ];
 }
