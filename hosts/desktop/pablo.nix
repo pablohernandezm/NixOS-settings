@@ -23,6 +23,7 @@
       nemo-fileroller
       unzip
       supabase-cli
+      postgresql_17
       (writeShellScriptBin "chknixpath" (builtins.readFile ../../scripts/chknixpath.sh))
     ];
 

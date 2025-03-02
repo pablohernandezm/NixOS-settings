@@ -1,6 +1,7 @@
 {pkgs,...}:{
 
   home.packages = with pkgs; [
+    ripgrep
     lua-language-server
     nil
     hyprls
