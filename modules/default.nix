@@ -8,7 +8,8 @@
     ./fonts
     ./pavucontrol
     ./pulseaudio
-    ./sddm
+    # ./sddm
+    ./regreet
     ./gaming
     ./flatpak
     ./lactd
