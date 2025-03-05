@@ -10,11 +10,13 @@
       gcc
       go
       bun
-      nodejs
+      nodejs_22
+      nodePackages.vercel
       rustc
       rustfmt
       cargo
       brave
+      tor-browser
       eza
       font-manager
       isoimagewriter
