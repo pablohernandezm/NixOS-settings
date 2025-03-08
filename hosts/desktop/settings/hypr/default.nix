@@ -33,7 +33,7 @@
           "$mod, m, exec, $menu"
           "$mod, t, exec, $terminal"
           "$mod, c, killactive,"
-          "$mod, s, exec, uwsm app -- hyprshot -m region"
+          "$mod, s, exec, uwsm app -- hyprshot -m region --freeze"
           "$mod Shift, s, exec, uwsm app -- hyprshot -m output"
           "$mod Alt, s, exec, uwsm app -- hyprshot -m window"
 
