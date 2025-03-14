@@ -26,11 +26,17 @@
       unzip
       supabase-cli
       postgresql_17
+      ciscoPacketTracer8
+      blender
       (writeShellScriptBin "chknixpath" (builtins.readFile ../../scripts/chknixpath.sh))
     ];
 
   };
 
+  programs.obs-studio.enable = true;
+  programs.obs-studio.plugins = with pkgs; [
+    obs-studio-plugins.droidcam-obs
+  ];
 
   imports = [
     ./settings
