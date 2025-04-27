@@ -19,8 +19,8 @@
       tor-browser
       eza
       font-manager
-      isoimagewriter
-      ventoy-full
+      # isoimagewriter
+      # ventoy-full
       nemo-with-extensions
       nemo-fileroller
       unzip
@@ -28,6 +28,9 @@
       postgresql_17
       ciscoPacketTracer8
       blender
+      awscli2
+      strawberry
+      opera
       (writeShellScriptBin "chknixpath" (builtins.readFile ../../scripts/chknixpath.sh))
     ];
 
