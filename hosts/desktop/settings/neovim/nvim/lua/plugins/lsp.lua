@@ -67,6 +67,7 @@ return {
         eslint = {},
         jsonls = {},
         html = {},
+        taplo = {},
         cssls = {
           settings = {
             css = {

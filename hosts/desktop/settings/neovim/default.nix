@@ -10,6 +10,7 @@
     typescript-language-server
     tailwindcss-language-server
     svelte-language-server
+    taplo #TOML
   ];
 
   home.file = {

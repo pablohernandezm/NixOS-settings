@@ -12,7 +12,9 @@ return {
       'sql',
       'nix',
       'hyprlang',
-      "rust"
+      'rust',
+      'markdown',
+      'toml'
     },
 
     highlight = {
