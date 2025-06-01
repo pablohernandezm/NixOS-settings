@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
   imports = [
     ./hypr
     ./waybar
@@ -8,7 +8,8 @@
     ./themes
     ./dunst
     ./neovim
-    ./nemo
     ./flatpak
+    ./nemo
+    ./kitty
   ];
 }

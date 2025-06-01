@@ -13,7 +13,7 @@
       "$mod" = "SUPER";
       "$menu" = ''rofi -show drun -show-icons -run-command "uwsm app -- {cmd}"'';
       "$terminal" = "uwsm app -- kitty";
-      "$browser" = "uwsm app -- brave";
+      "$browser" = "uwsm app -- flatpak run app.zen_browser.zen";
 
       exec-once = [
         "systemctl --user enable --now hyprpolkitagent.service"
@@ -29,7 +29,7 @@
       bind =
         [
           "$mod, w, exec, pkill waybar && waybar &"
-          "$mod, b, exec, $browser"
+          "$mod, z, exec, $browser"
           "$mod, m, exec, $menu"
           "$mod, t, exec, $terminal"
           "$mod, c, killactive,"

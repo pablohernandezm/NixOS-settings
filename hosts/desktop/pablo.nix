@@ -15,22 +15,20 @@
       rustc
       rustfmt
       cargo
-      brave
       tor-browser
       eza
       font-manager
-      # isoimagewriter
-      # ventoy-full
       nemo-with-extensions
       nemo-fileroller
       unzip
       supabase-cli
       postgresql_17
-      ciscoPacketTracer8
       blender
       awscli2
       strawberry
-      opera
+      shotcut
+      qimgv
+      vlc
       (writeShellScriptBin "chknixpath" (builtins.readFile ../../scripts/chknixpath.sh))
     ];
 

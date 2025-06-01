@@ -2,7 +2,8 @@
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
-      (nerdfonts.override { fonts = ["JetBrainsMono" "Noto"];})
+      nerd-fonts.noto
+      nerd-fonts.jetbrains-mono
       manrope
     ];
 

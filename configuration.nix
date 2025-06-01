@@ -89,6 +89,7 @@
     extraGroups = [ "networkmanager" "wheel" "docker"];
     packages = with pkgs; [
       git
+      jujutsu # Git alternative, compatible with git repositories
       neovim
     ];
   };
@@ -97,6 +98,14 @@
   nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nix.settings.auto-optimise-store = true;
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
