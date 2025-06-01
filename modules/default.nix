@@ -4,7 +4,7 @@
     ./hypr
     ./waybar
     ./dunst
-    ./rofi-wayland
+    # ./rofi-wayland
     ./fonts
     ./pavucontrol
     ./pulseaudio
