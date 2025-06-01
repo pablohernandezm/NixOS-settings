@@ -15,10 +15,8 @@
       rustc
       rustfmt
       cargo
-      tor-browser
       eza
       font-manager
-      nemo-with-extensions
       nemo-fileroller
       unzip
       supabase-cli

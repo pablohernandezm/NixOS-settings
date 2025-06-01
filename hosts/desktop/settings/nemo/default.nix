@@ -1,4 +1,9 @@
 { pkgs, ...}:{
+  home.packages = with pkgs; [
+    nemo-with-extensions
+    ffmpegthumbnailer
+  ];
+
   xdg.desktopEntries.nemo = {
     name = "Nemo";
     icon = "nemo";
