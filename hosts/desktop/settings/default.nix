@@ -12,5 +12,6 @@
     ./nemo
     ./kitty
     ./rofi
+    ./vlc
   ];
 }

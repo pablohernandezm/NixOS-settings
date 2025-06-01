@@ -26,9 +26,7 @@
       blender
       awscli2
       strawberry
-      shotcut
       qimgv
-      vlc
       (writeShellScriptBin "chknixpath" (builtins.readFile ../../scripts/chknixpath.sh))
     ];
 
