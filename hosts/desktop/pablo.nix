@@ -25,6 +25,8 @@
       awscli2
       strawberry
       qimgv
+      openshot-qt
+      audacity
       (writeShellScriptBin "chknixpath" (builtins.readFile ../../scripts/chknixpath.sh))
     ];
 
