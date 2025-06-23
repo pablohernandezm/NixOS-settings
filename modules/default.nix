@@ -12,5 +12,6 @@
     ./gaming
     ./flatpak
     ./lactd
+    ./virtualisation
   ];
 }

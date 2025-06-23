@@ -27,6 +27,7 @@
       qimgv
       openshot-qt
       audacity
+      brave
       (writeShellScriptBin "chknixpath" (builtins.readFile ../../scripts/chknixpath.sh))
     ];
 
