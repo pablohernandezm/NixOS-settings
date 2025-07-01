@@ -28,6 +28,7 @@
       openshot-qt
       audacity
       brave
+      wl-clipboard
       (writeShellScriptBin "chknixpath" (builtins.readFile ../../scripts/chknixpath.sh))
     ];
 
