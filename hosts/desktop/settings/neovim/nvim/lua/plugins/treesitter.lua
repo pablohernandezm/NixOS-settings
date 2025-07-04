@@ -14,7 +14,8 @@ return {
       'hyprlang',
       'rust',
       'markdown',
-      'toml'
+      'toml',
+      'typst'
     },
 
     highlight = {

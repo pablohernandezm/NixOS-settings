@@ -11,6 +11,7 @@
     tailwindcss-language-server
     svelte-language-server
     taplo #TOML
+    tinymist #Typst
   ];
 
   home.file = {

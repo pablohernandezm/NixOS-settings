@@ -13,5 +13,6 @@
     ./kitty
     ./rofi
     ./vlc
+    ./documents
   ];
 }

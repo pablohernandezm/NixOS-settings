@@ -9,7 +9,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs = {nixpkgs, home-manager, nix-flatpak, ...}@inputs: {
+  outputs = {nixpkgs, home-manager, nix-flatpak,  ...}@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [

@@ -24,7 +24,13 @@
   };
 
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.xdgOpenUsePortal = true;
+  xdg.portal.extraPortals = [ 
+    pkgs.xdg-desktop-portal-gtk
+    pkgs.xdg-desktop-portal-hyprland 
+  ];
+
+  services.dbus.enable = true;
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = 1;

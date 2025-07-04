@@ -8,6 +8,7 @@
     enable = true;
     xwayland.enable = true;
     systemd.enable = false;
+    portalPackage = null;
      
     settings = {
       "$mod" = "SUPER";

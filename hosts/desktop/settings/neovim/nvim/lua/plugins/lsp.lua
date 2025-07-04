@@ -48,6 +48,14 @@ return {
     },
     opts = {
       servers = {
+        tinymist = {
+          settings = {
+            formatterMode = "typstyle",
+            exportPdf = "onType",
+            semanticTokens = "disable"
+
+          }
+        },
         ts_ls = {},
         tailwindcss = {},
         svelte = {},
@@ -135,6 +143,64 @@ return {
           end
         end
       })
+
+      -- Typst settings
+      vim.api.nvim_create_user_command("OpenPdf", function()
+        local filepath = vim.api.nvim_buf_get_name(0)
+
+        if filepath:match("%.typ$") then
+          local pdf_path = filepath:gsub("%.typ$", ".pdf")
+
+          local open_command
+          if vim.fn.has("mac") == 1 then
+            open_command = { "open", pdf_path }
+          elseif vim.fn.has("unix") == 1 then -- Linux and other Unix-like systems
+            -- Common PDF viewers on Linux: xdg-open, evince, zathura, okular
+            -- xdg-open is generally the most reliable as it respects default applications
+            open_command = { "xdg-open", pdf_path }
+          elseif vim.fn.has("win32") == 1 then -- Windows
+            -- On Windows, 'start' is the equivalent of 'open' or 'xdg-open'
+            -- You might need 'cmd.exe /c start "" "path/to/file.pdf"' for more complex paths
+            open_command = { "cmd.exe", "/c", "start", "", pdf_path }
+          else
+            -- Fallback or error for unknown OS
+            vim.notify("Unsupported operating system for OpenPdf command.", vim.log.levels.WARN)
+            return
+          end
+
+          vim.system(open_command)
+        end
+      end, {})
+
+      lspconfig["tinymist"].setup {
+        on_attach = function(client, bufnr)
+          vim.keymap.set("n", "<leader>ltp", function()
+            client:exec_cmd({
+
+              title = "pin",
+
+              command = "tinymist.pinMain",
+
+              arguments = { vim.api.nvim_buf_get_name(0) },
+
+            }, { bufnr = bufnr })
+          end, { desc = "[T]inymist [P]in", noremap = true })
+
+
+
+          vim.keymap.set("n", "<leader>ltu", function()
+            client:exec_cmd({
+
+              title = "unpin",
+
+              command = "tinymist.pinMain",
+
+              arguments = { vim.v.null },
+
+            }, { bufnr = bufnr })
+          end, { desc = "[T]inymist [U]npin", noremap = true })
+        end,
+      }
     end
   },
 }
