@@ -1,10 +1,10 @@
 return {
+  { 'echasnovski/mini.icons', version = false },
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
     dependencies = {
       'nvim-tree/nvim-web-devicons',
-      { 'echasnovski/mini.icons', version = false },
     },
     opts = {},
     config = function(_, opts)
