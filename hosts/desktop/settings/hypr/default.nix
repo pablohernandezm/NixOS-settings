@@ -9,7 +9,7 @@
     xwayland.enable = true;
     systemd.enable = false;
     portalPackage = null;
-     
+
     settings = {
       "$mod" = "SUPER";
       "$menu" = ''rofi -show drun -show-icons -run-command "uwsm app -- {cmd}"'';
@@ -24,7 +24,7 @@
       ];
 
       input = {
-        kb_layout	= "us";
+        kb_layout = "us";
         kb_variant = "altgr-intl";
       };
 
@@ -45,10 +45,15 @@
           "$mod, h, movefocus, l"
           "$mod, l, movefocus, r"
 
+          "$mod Shift, h, movewindow, l"
           "$mod Shift, j, movewindow, d"
           "$mod Shift, k, movewindow, u"
-          "$mod Shift, h, movewindow, l"
           "$mod Shift, l, movewindow, r"
+
+          "$mod Alt, h, resizeactive, -25 0"
+          "$mod Alt, j, resizeactive, 0 25"
+          "$mod Alt, k, resizeactive, 0 -25"
+          "$mod Alt, l, resizeactive, 25 0"
 
           "$mod, mouse_down, workspace, e+1"
           "$mod, mouse_up, workspace, e-1"
@@ -84,11 +89,11 @@
         "f[1], gapsout:0, gapsin:0"
       ];
 
-      windowrulev2 =   [
+      windowrulev2 = [
         "suppressevent maximize, class:.*" # Ignore maximize requests from apps.
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0" # Fix some dragging issues with XWayland
 
-        # Smart gaps 
+        # Smart gaps
         "bordersize 0, floating:0, onworkspace:w[tv1]"
         "rounding 0, floating:0, onworkspace:w[tv1]"
         "bordersize 0, floating:0, onworkspace:f[1]"
