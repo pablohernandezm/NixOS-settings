@@ -27,6 +27,10 @@ in {
     tinymist #Typst
     tree-sitter
     fd
+
+    #formatters
+    stylua
+    typstyle
   ];
 
   home.file = {
