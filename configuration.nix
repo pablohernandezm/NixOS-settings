@@ -100,8 +100,8 @@
   nix.settings.auto-optimise-store = true;
   nix.gc = {
     automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
+    dates = ["20:00" "12:00"];
+    options = "--delete-older-than 3d";
   };
 
 
