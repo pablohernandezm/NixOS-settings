@@ -16,3 +16,7 @@ vim.opt.relativenumber = true -- Show relative line numbers to facilitate moveme
 
 -- Terminal colors
 vim.opt.termguicolors = true -- Enable 24-bit colors for a better visual experience
+
+-- Spell checker
+vim.opt.spelllang = 'en,es'
+vim.opt.spell = true
