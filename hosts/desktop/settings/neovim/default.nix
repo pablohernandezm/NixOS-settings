@@ -25,6 +25,8 @@ in {
     svelte-language-server
     taplo #TOML
     tinymist #Typst
+    tree-sitter
+    fd
   ];
 
   home.file = {
