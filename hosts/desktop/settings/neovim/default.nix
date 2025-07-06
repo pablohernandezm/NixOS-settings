@@ -14,23 +14,30 @@ let
 in {
 
   home.packages = with pkgs; [
+    # utils
     ripgrep
+    tree-sitter
+    fd
+
+    # formatters
+    alejandra
+    stylua
+    typstyle
+    pgformatter
+    rustfmt
+
+    # lsp 
     lua-language-server
     nil
-    hyprls
     rust-analyzer
     vscode-langservers-extracted
     typescript-language-server
     tailwindcss-language-server
     svelte-language-server
+    hyprls
     taplo #TOML
     tinymist #Typst
-    tree-sitter
-    fd
-
-    #formatters
-    stylua
-    typstyle
+    postgres-lsp
   ];
 
   home.file = {

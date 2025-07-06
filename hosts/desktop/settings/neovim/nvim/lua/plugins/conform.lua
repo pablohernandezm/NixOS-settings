@@ -20,13 +20,16 @@ return {
 				formatters_by_ft = {
 					typst = { "typstyle" },
 					lua = { "stylua" },
+					sql = { "pg_format" },
+					nix = { "alejandra" },
+					rust = { "rustfmt" },
 				},
 			})
 
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				pattern = "*",
 				callback = function(args)
-					require("conform").format({ bufnr = args.buf, lsp_format="fallback" })
+					require("conform").format({ bufnr = args.buf, lsp_format = "fallback" })
 				end,
 			})
 		end,

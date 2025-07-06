@@ -13,7 +13,6 @@
       nodejs_22
       nodePackages.vercel
       rustc
-      rustfmt
       cargo
       eza
       font-manager
