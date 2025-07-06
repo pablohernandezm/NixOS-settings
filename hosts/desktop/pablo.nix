@@ -28,6 +28,7 @@
       openshot-qt
       audacity
       brave
+      abiword
       (writeShellScriptBin "chknixpath" (builtins.readFile ../../scripts/chknixpath.sh))
     ];
 
