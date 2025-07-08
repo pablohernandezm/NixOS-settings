@@ -1,0 +1,125 @@
+{
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "clock": {
+    "format-alt": "{:%a, %d. %b  %H:%M}"
+  },
+  "network": {
+    "format": "{icon}",
+    "format-alt": " {bandwidthUpBytes}  {bandwidthDownBytes}  {icon}",
+    "tooltip-format": "{ifname}",
+    "format-icons": {
+      "wifi": "",
+      "ethernet": "󰟀",
+      "disconnected": "󰈂"
+    }
+  },
+  "custom/separator": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/hardware": {
+    "format": "",
+    "tooltip-format": "Hardware metrics"
+  },
+  "custom/power": {
+    "format": "⏻",
+    "tooltip-format": "Turn off",
+    "on-click": "shutdown now"
+  },
+  "custom/sleep": {
+    "format": "󰒲 ",
+    "tooltip-format": "Sleep",
+    "on-click": "systemctl sleep"
+  },
+  "custom/lock": {
+    "format": "",
+    "tooltip-format": "Lock",
+    "on-click": "loginctl lock-session"
+  },
+  "custom/menu": {
+    "format": "",
+    "on-click": "rofi -show drun -show-icons -run-command 'uwsm app -- {cmd}'",
+    "tooltip-format": "Apps menu"
+  },
+  "cpu": {
+    "format": "{icon0} {usage}%",
+    "format-icons": [
+      ""
+    ]
+  },
+  "disk": {
+    "format": "󰨣 {used} / {total} : {percentage_used}%"
+  },
+  "memory": {
+    "format": " {percentage}%"
+  },
+  "wlr/taskbar": {
+    "on-click": "activate",
+    "tooltip": false
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    },
+    "tooltip-format-activated": "Idle inhibitor: {status}",
+    "tooltip-format-deactivated": "Idle inhibitor: {status}"
+  },
+  "pulseaudio": {
+    "on-click-right": "pavucontrol",
+    "on-click": "amixer set Master toggle",
+    "format": " ",
+    "format-muted": " "
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "EN",
+    "format-es": "ES"
+  },
+  "hyprland/window": {
+    "max-length": 25,
+    "format": "{class}",
+    "separate-outputs": true,
+    "on-click": "rofi -show drun -show-icons -run-command 'uwsm app -- {cmd}'",
+    "tooltip-format": "Apps menu"
+  },
+  "hyprland/workspaces": {
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "show-special": false,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    },
+    "format-icons": {
+      // "active": "",
+      // "default": "",
+      // "empty": ""
+      "active": "",
+      "default": "",
+      "empty": ""
+    }
+  }
+}

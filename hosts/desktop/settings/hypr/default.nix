@@ -2,6 +2,7 @@
   imports = [
     ./hyprpolkitagent
     ./hyprshot
+    ./hypridle
   ];
 
   wayland.windowManager.hyprland = {
@@ -31,6 +32,7 @@
       bind =
         [
           "$mod, w, exec, pkill waybar && waybar &"
+          "$mod Shift, w, exec, waybar &"
           "$mod, z, exec, $browser"
           "$mod, m, exec, $menu"
           "$mod, e, exec, $emoji"
