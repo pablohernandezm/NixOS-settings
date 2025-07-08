@@ -22,9 +22,7 @@
       "custom/separator",
       "group/hardware",
       "custom/separator",
-      "network",
-      "group/group-tray",
-      "custom/separator"
+      "network"
     ]
   },
   "group/time": {
