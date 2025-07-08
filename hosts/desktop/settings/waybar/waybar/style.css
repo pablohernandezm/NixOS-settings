@@ -87,7 +87,7 @@ tooltip {
 #window,
 #wireplumber,
 #workspaces,
-#custom-menu,
+#custom-apps,
 #custom-power,
 #custom-sleep,
 #custom-lock,
@@ -101,22 +101,29 @@ tooltip {
   padding-left: 6px;
 }
 
-#workspaces {
-  background-color: rgb(0, 0, 0);
-  border-radius: 20px;
+#menu,
+#workspaces,
+#info,
+#tray,
+#time {
+  background-color: black;
+  border-radius: 10px;
+  padding: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #taskbar button.active {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-#custom-menu {
+#custom-apps {
   font-size: 20px;
 }
 
-#custom-power {
-  font-size: 16px;
-}
 
 #pulseaudio-slider slider {
   min-height: 0px;

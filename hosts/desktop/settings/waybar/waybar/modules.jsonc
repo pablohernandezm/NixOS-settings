@@ -45,7 +45,7 @@
     "tooltip-format": "Lock",
     "on-click": "loginctl lock-session"
   },
-  "custom/menu": {
+  "custom/apps": {
     "format": "",
     "on-click": "rofi -show drun -show-icons -run-command 'uwsm app -- {cmd}'",
     "tooltip-format": "Apps menu"
@@ -92,11 +92,7 @@
     "format-es": "ES"
   },
   "hyprland/window": {
-    "max-length": 25,
-    "format": "{class}",
-    "separate-outputs": true,
-    "on-click": "rofi -show drun -show-icons -run-command 'uwsm app -- {cmd}'",
-    "tooltip-format": "Apps menu"
+    "format": "{initialTitle}"
   },
   "hyprland/workspaces": {
     "active-only": false,

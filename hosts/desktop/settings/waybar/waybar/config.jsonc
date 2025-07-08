@@ -4,24 +4,35 @@
     "~/.config/waybar/modules.jsonc"
   ],
   "modules-left": [
-    "group/power",
+    "group/menu",
     "hyprland/workspaces"
-    // "custom/separator",
-    // "wlr/taskbar"
   ],
   "modules-center": [
-    "custom/menu",
     "hyprland/window"
   ],
   "modules-right": [
-    "group/volume",
-    "custom/separator",
-    "group/hardware",
-    "custom/separator",
-    "network",
-    "custom/separator",
-    "clock"
+    "group/info",
+    "tray",
+    "group/time"
   ],
+  "group/info": {
+    "orientation": "inherit",
+    "modules": [
+      "group/volume",
+      "custom/separator",
+      "group/hardware",
+      "custom/separator",
+      "network",
+      "group/group-tray",
+      "custom/separator"
+    ]
+  },
+  "group/time": {
+    "orientation": "inherit",
+    "modules": [
+      "clock"
+    ]
+  },
   "group/hardware": {
     "orientation": "inherit",
     "modules": [
@@ -39,9 +50,11 @@
       "click-to-reveal": true
     }
   },
-  "group/power": {
+  "group/menu": {
     "orientation": "inherit",
     "modules": [
+      "custom/apps",
+      "custom/separator",
       "custom/power",
       "custom/separator",
       "custom/sleep",
