@@ -3,6 +3,7 @@
     ./hyprpolkitagent
     ./hyprshot
     ./hypridle
+    ./hyprpaper
   ];
 
   wayland.windowManager.hyprland = {
@@ -20,8 +21,9 @@
 
       exec-once = [
         "systemctl --user enable --now hyprpolkitagent.service"
-        "uwsm app -- waybar &"
         "uwsm app -- dunst &"
+        "systemctl --user enable --now hyprpaper.service"
+        "systemctl --user enable --now waybar.service"
       ];
 
       input = {

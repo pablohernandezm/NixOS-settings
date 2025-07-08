@@ -1,8 +1,0 @@
-vim.keymap.set({ 'n' }, '<leader>q', '<cmd>q<CR>)', { desc = 'Close' })
-vim.keymap.set({ 'n' }, '<leader>Q', '<cmd>q!<CR>)', { desc = 'Close and ignore' })
-
--- vim.keymap.set({ 'n' }, '<leader>w', '<cmd>w<CR>)', { desc = 'Write' })
-vim.keymap.set({ 'n' }, '<leader>W', '<cmd>wq<CR>)', { desc = 'Write and close' })
-
-vim.keymap.set({ 'n' }, '<leader>%', '<cmd>so ~/.config/nvim/init.lua<CR>)', { desc = 'Reload settings' })
-vim.keymap.set('n', '<leader>bc', '<cmd>bd<CR>', { desc = 'Close buffer' })

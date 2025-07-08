@@ -1,14 +1,4 @@
 {
-  "battery": {
-    "format": "{capacity}% {icon}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
-  },
   "clock": {
     "format-alt": "{:%a, %d. %b  %H:%M}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -29,9 +19,8 @@
       "on-click-right": "mode"
     }
   },
-  "network": {
+  "network#icon": {
     "format": "{icon}",
-    "format-alt": " {bandwidthUpBytes}  {bandwidthDownBytes}  {icon}",
     "tooltip-format": "{ifname}",
     "format-icons": {
       "wifi": "",
@@ -39,8 +28,32 @@
       "disconnected": "󰈂"
     }
   },
+  "network#download": {
+    "format": "{bandwidthDownBytes}",
+    "tooltip-format": "{bandwidthDownBits}"
+  },
+  "custom/downIcon": {
+    "format": "",
+    "tooltip": false
+  },
+  "network#upload": {
+    "format": "{bandwidthUpBytes}",
+    "tooltip-format": "{bandwidthUpBits}"
+  },
+  "custom/upIcon": {
+    "format": "",
+    "tooltip": false
+  },
   "custom/separator": {
     "format": "",
+    "tooltip": false
+  },
+  "custom/separator#extended-left": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/separator#extended-right": {
+    "format": "",
     "tooltip": false
   },
   "custom/hardware": {
@@ -53,14 +66,24 @@
     "on-click": "shutdown now"
   },
   "custom/sleep": {
-    "format": "󰒲 ",
+    "format": "󰤄",
     "tooltip-format": "Sleep",
     "on-click": "systemctl sleep"
   },
   "custom/lock": {
-    "format": "",
+    "format": "",
     "tooltip-format": "Lock",
     "on-click": "loginctl lock-session"
+  },
+  "custom/logout": {
+    "format": "󰍃",
+    "tooltip-format": "Log Out",
+    "on-click": "hyprctl dispatch exit"
+  },
+  "custom/reboot": {
+    "format": "󰜉",
+    "tooltip-format": "Reboot",
+    "on-click": "reboot"
   },
   "custom/apps": {
     "format": "",
@@ -68,16 +91,28 @@
     "tooltip-format": "Apps menu"
   },
   "cpu": {
-    "format": "{icon0} {usage}%",
+    "format": "{usage}%",
     "format-icons": [
       ""
     ]
   },
+  "custom/cpuIcon": {
+    "format": "",
+    "tooltip": false
+  },
   "disk": {
-    "format": "󰨣 {used} / {total} : {percentage_used}%"
+    "format": "{used} / {total} : {percentage_used}%"
+  },
+  "custom/diskIcon": {
+    "format": "",
+    "tooltip": false
   },
   "memory": {
-    "format": " {percentage}%"
+    "format": "{percentage}%"
+  },
+  "custom/memoryIcon": {
+    "format": "",
+    "tooltip": false
   },
   "wlr/taskbar": {
     "on-click": "activate",

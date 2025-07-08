@@ -6,6 +6,11 @@
 
   environment.systemPackages = with pkgs; [
     kitty
+    hyprpaper
+    waytrogen
+    # swww
+    # mpvpaper
+    linux-wallpaperengine
   ];
 
   programs.uwsm.enable = true;

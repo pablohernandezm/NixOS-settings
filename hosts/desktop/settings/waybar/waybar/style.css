@@ -6,7 +6,8 @@
 */
 
 * {
-  font-family: "JetBrains Mono Nerd Font";
+  /* font-family: "JetBrains Mono Nerd Font"; */
+  font-family: "JetBrainsMono NFM";
   font-weight: bold;
   min-height: 0;
   font-size: 97%;
@@ -39,6 +40,7 @@ window#waybar.empty #window {
   border: none;
   padding-left: 4px;
   padding-right: 4px;
+  transition: 0.2s ease;
 }
 
 #workspaces button.active {
@@ -91,10 +93,12 @@ tooltip {
 #custom-power,
 #custom-sleep,
 #custom-lock,
+#custom-reboot,
 #idle_inhibitor,
 #custom-hardware,
 #pulseaudio,
-#pulseaudio-slider {
+#pulseaudio-slider,
+#custom-logout {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-right: 6px;
@@ -107,21 +111,63 @@ tooltip {
 #tray,
 #time {
   background-color: black;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 0;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
   margin: 0;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
+
 
 #taskbar button.active {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Icon format */
+#custom-power,
+#custom-reboot,
+#custom-sleep,
+#custom-logout,
+#custom-lock,
+#idle_inhibitor,
+#volume,
+#custom-hardware,
+#custom-downIcon,
+#custom-upIcon,
+#custom-cpuIcon,
+#custom-memoryIcon,
+#custom-diskIcon,
+#network.icon {
+  font-size: 17px;
+}
+
+#custom-separator {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#custom-separator.extended-right {
+  margin-right: 5px;
+}
+
+#workspaces button {
+  font-size: 18px;
+}
+
+#workspaces button.empty {
+  font-size: 15px;
+}
+
+
+#workspaces button.active {
+  font-size: 26px;
+}
+
 #custom-apps {
-  font-size: 20px;
+  font-size: 28px;
+  padding: 0;
 }
 
 

@@ -22,7 +22,7 @@
       "custom/separator",
       "group/hardware",
       "custom/separator",
-      "network"
+      "group/network"
     ]
   },
   "group/time": {
@@ -35,12 +35,35 @@
     "orientation": "inherit",
     "modules": [
       "custom/hardware",
+      "custom/memoryIcon",
       "memory",
       "custom/separator",
+      "custom/cpuIcon",
       "cpu",
       "custom/separator",
+      "custom/diskIcon",
       "disk",
       "custom/separator"
+    ],
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false,
+      "click-to-reveal": true
+    }
+  },
+  "group/network": {
+    "orientation": "inherit",
+    "modules": [
+      // Icon
+      "network#icon",
+      // Download
+      "custom/downIcon",
+      "network#download",
+      // Upload
+      "custom/upIcon",
+      "network#upload",
+      // Separator
+      "custom/separator#extended-left"
     ],
     "drawer": {
       "transition-duration": 500,
@@ -52,15 +75,18 @@
     "orientation": "inherit",
     "modules": [
       "custom/apps",
-      "custom/separator",
+      "custom/separator#extended-right",
       "custom/power",
+      "custom/separator",
+      "custom/reboot",
       "custom/separator",
       "custom/sleep",
       "custom/separator",
+      "custom/logout",
+      "custom/separator",
       "custom/lock",
       "custom/separator",
-      "idle_inhibitor",
-      "custom/separator"
+      "idle_inhibitor"
     ],
     "drawer": {
       "transition-duration": 500,
