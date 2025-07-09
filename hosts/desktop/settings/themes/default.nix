@@ -42,8 +42,4 @@ in {
   };
 
   gtk.enable = true;
-
-  # wayland.windowManager.hyprland.settings.exec-once = [
-  #   "hyprctl setcursor ${cursorTheme} ${toString cursorSize}"
-  # ];
 }

@@ -1,18 +1,16 @@
 {pkgs, ...}: let
-  currentFolder = builtins.toString ./preview.jpg;
-  # wallpaper = pkgs.fetchurl {
-  #   url = "https://unsplash.com/photos/Z6EpCdMcoUU/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8N3x8c3BhY2V8ZW58MHwwfHx8MTc1MTk0ODk0NXww&force=true";
-  #   # url = "file://${currentFolder}";
-  #   hash = "sha256-45TATty0jhEXQGPVKeYFYogRbeEs83AB2rZHaUJDb1I=";
-  # };
+  wallpaper = pkgs.fetchurl {
+    url = "https://unsplash.com/photos/oMpAz-DN-9I/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzUyMDM0OTQ4fA&force=true";
+    hash = "sha256-YT9d7Dm6caGbfE+pFmDGbcCXk3Ue+hJqOQlYpYjjuOI=";
+  };
 in {
   services.hyprpaper = {
     enable = true;
     settings = {
       preload = [
-        currentFolder
+        "${builtins.toString wallpaper}"
       ];
-      wallpaper = ", ${currentFolder}";
+      wallpaper = ", ${builtins.toString wallpaper}";
     };
   };
 }

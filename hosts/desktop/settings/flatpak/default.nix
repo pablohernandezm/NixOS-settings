@@ -6,6 +6,9 @@
       appId = "com.stremio.Stremio";
       origin = "flathub";
     }
-    # { appId = "app.zen_browser.zen"; origin = "flathub"; }
+    {
+      appId = "org.fedoraproject.MediaWriter";
+      origin = "flathub";
+    }
   ];
 }
