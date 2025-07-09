@@ -7,11 +7,20 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = {nixpkgs, home-manager, nix-flatpak,  ...}@inputs: {
+  outputs = {
+    nixpkgs,
+    home-manager,
+    nix-flatpak,
+    ...
+  } @ inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
       modules = [
         ./configuration.nix
         ./modules
@@ -23,11 +32,14 @@
           home-manager.users.pablo = import ./hosts/desktop/pablo.nix;
           home-manager.backupFileExtension = "backup";
 
-          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.extraSpecialArgs = {
+            inherit inputs;
+            system = "x86_64-linux";
+          };
         }
       ];
 
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
     };
   };
 }

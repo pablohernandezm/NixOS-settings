@@ -16,7 +16,7 @@
       "$mod" = "SUPER";
       "$menu" = ''rofi -show drun -show-icons -run-command "uwsm app -- {cmd}"'';
       "$terminal" = "uwsm app -- kitty";
-      "$browser" = "uwsm app -- flatpak run app.zen_browser.zen";
+      "$browser" = "uwsm app -- zen";
       "$emoji" = "rofi -modi emoji -show emoji";
 
       exec-once = [

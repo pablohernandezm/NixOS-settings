@@ -1,5 +1,8 @@
-{ pkgs, ... }:
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   home = {
     username = "pablo";
     homeDirectory = "/home/pablo";
@@ -31,7 +34,6 @@
       obsidian
       (writeShellScriptBin "chknixpath" (builtins.readFile ../../scripts/chknixpath.sh))
     ];
-
   };
 
   programs.bash = {
@@ -64,5 +66,8 @@
 
   imports = [
     ./settings
+    inputs.zen-browser.homeModules.beta
   ];
+
+  programs.zen-browser.enable = true;
 }
