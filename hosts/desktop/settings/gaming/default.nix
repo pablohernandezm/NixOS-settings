@@ -1,5 +1,4 @@
-{ pkgs, ...}:
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     itch
     heroic
@@ -12,7 +11,7 @@
     exec = ''sh -c "steam-run %f &"'';
     icon = "steam";
     type = "Application";
-    mimeType = [ "application/x-shellscript" ];
+    mimeType = ["application/x-shellscript"];
     terminal = false;
   };
 

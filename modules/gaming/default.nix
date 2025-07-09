@@ -1,8 +1,8 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     steam-run-free
     wine-wayland
+    protonup-ng
   ];
 
   programs.steam = {
