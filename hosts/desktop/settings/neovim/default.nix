@@ -1,17 +1,55 @@
-{pkgs,...}:
-let 
+{pkgs, ...}: let
   spl_es_es = builtins.fetchurl {
-    url="https://ftp.nluug.nl/pub/vim/runtime/spell/es.utf-8.spl";
-    sha256="1qvv6sp4d25p1542vk0xf6argimlss9c7yh7y8dsby2wjan3fdln";
+    url = "https://ftp.nluug.nl/pub/vim/runtime/spell/es.utf-8.spl";
+    sha256 = "1qvv6sp4d25p1542vk0xf6argimlss9c7yh7y8dsby2wjan3fdln";
   };
 
   spl_es_latin1 = builtins.fetchurl {
-    url="https://ftp.nluug.nl/pub/vim/runtime/spell/es.latin1.spl";
-    sha256="0h8lhir0yk2zcs8rjn2xdsj2y533kdz7aramsnv0syaw1y82mhq7";
+    url = "https://ftp.nluug.nl/pub/vim/runtime/spell/es.latin1.spl";
+    sha256 = "0h8lhir0yk2zcs8rjn2xdsj2y533kdz7aramsnv0syaw1y82mhq7";
   };
+  configs = [
+    {
+      name = "main";
+      opts = {
+        source = "${./nvim}";
+        recursive = true;
+      };
+    }
+    {name = "test";}
+  ];
 
-  spell_folder = "./.config/nvim/spell";
+  global_sub_files = [
+    {
+      name = "spell/es.utf-8.spl";
+      opts = {source = spl_es_es;};
+    }
+    {
+      name = "spell/es.latin1.spl";
+      opts = {source = spl_es_latin1;};
+    }
+  ];
+  folder = ".config";
 in {
+  home.file = builtins.listToAttrs (
+    []
+    ++ (
+      builtins.map (c: {
+        name = "${folder}/nvim-${c.name}";
+        value = c.opts;
+      })
+      (builtins.filter (x: builtins.hasAttr "opts" x) configs)
+    )
+    ++ (
+      builtins.concatMap (f:
+        builtins.map (c: {
+          name = "${folder}/nvim-${c.name}/${f.name}";
+          value = f.opts;
+        })
+        configs)
+      global_sub_files
+    )
+  );
 
   home.packages = with pkgs; [
     # utils
@@ -26,7 +64,7 @@ in {
     pgformatter
     rustfmt
 
-    # lsp 
+    # lsp
     lua-language-server
     nil
     rust-analyzer
@@ -39,48 +77,4 @@ in {
     tinymist #Typst
     postgres-lsp
   ];
-
-  home.file = {
-    "./.config/nvim"= {
-      source = "${./nvim}";
-      recursive = true;
-    };
-
-    "${spell_folder}/es.utf-8.spl" = { source = spl_es_es;};
-    "${spell_folder}/es.latin1.spl" = { source = spl_es_latin1;};
-  };
-
-
-  #  NixOS way alternative
-  # imports = [ inputs.nvf.homeManagerModules.default ];
-	#  programs.nvf = {
-	#    enable = true;
-	#    # your settings need to go into the settings attribute set
-	#    # most settings are documented in the appendix
-	#    settings = {
-	#      vim = {
-	#        viAlias = false;
-	#        vimAlias = true;
-	#
-	# theme = {
-	#   enable = true;
-	#   name = "rose-pine";
-	#   style = "main";
-	# };
-	#
-	#
-	# languages = {
-	#   enableLSP = true;
-	#   enableTreesitter = true;
-	#
-	#   nix.enable = true;
-	#   ts.enable = true;
-	#   rust.enable = true;
-	# };
-	#
-	# telescope.enable = true;
-	# autocomplete.nvim-cmp.enable = true;
-	#      };
-	#    };
-	#  };
 }

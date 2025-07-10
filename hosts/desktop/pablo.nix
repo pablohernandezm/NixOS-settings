@@ -17,6 +17,7 @@
       nodePackages.vercel
       rustc
       cargo
+      gnumake
       eza
       font-manager
       nemo-fileroller
@@ -65,6 +66,7 @@
 
   imports = [
     ./settings
+    ./scripts
     inputs.zen-browser.homeModules.beta
   ];
 
