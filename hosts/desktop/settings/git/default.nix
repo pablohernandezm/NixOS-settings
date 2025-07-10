@@ -1,5 +1,4 @@
-{pkgs, ...}:
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     gh
   ];
@@ -7,5 +6,8 @@
     enable = true;
     userEmail = "phernandezm07@gmail.com";
     userName = "pablohernandezm";
+    extraConfig = {
+      core.editor = "nvim";
+    };
   };
 }
