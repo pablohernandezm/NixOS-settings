@@ -1,6 +1,7 @@
 {pkgs, ...}: let
   scriptPaths = [
     ./nvimctl.nix
+    ./nixpath.nix
   ];
 
   importWithPkgs = path: import path {inherit pkgs;};

@@ -32,7 +32,6 @@
       audacity
       abiword
       obsidian
-      (writeShellScriptBin "chknixpath" (builtins.readFile ../../scripts/chknixpath.sh))
     ];
   };
 
