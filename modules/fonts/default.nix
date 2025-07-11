@@ -1,4 +1,4 @@
-{pkgs, ...}:{
+{pkgs, ...}: {
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
@@ -9,9 +9,9 @@
 
     fontconfig = {
       defaultFonts = {
-        serif = [ "Noto Mono" ];
-        sansSerif = [ "Manrope" ];
-        monospace = [ "JetBrains Mono" ];
+        serif = ["Noto Mono"];
+        sansSerif = ["Manrope"];
+        monospace = ["JetBrainsMono NFM"];
       };
     };
   };
